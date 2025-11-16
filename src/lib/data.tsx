@@ -497,6 +497,7 @@ export const experiencesData = [
   },
 
   {
+    certificate: "",
     title: "Web Developer & Content Writer",
     company: "Film Club, IIT Mandi",
     description:
