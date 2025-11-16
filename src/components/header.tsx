@@ -2,20 +2,21 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link'; // Removed next/link for preview
 
-import { useActiveSection } from '@/components/active-section-provider';
-import { Button } from '@/components/button';
+// UPDATED: Changed to relative paths for preview
+import { useActiveSection } from './active-section-provider';
+import { Button } from './button';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/dialog';
-import { Icons } from '@/components/icons';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { links } from '@/lib/data';
+} from './dialog';
+import { Icons } from './icons';
+import { ThemeToggle } from './theme-toggle';
+import { links } from '../lib/data';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,9 +53,10 @@ export const Header = () => {
                   key={name}
                   className="border-muted-foreground/10 py-3 text-sm [&:not(:last-child)]:border-b"
                 >
-                  <Link className="block" href={hash}>
+                  {/* UPDATED: Changed Link to <a> tag */}
+                  <a className="block" href={hash}>
                     {name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -66,7 +68,8 @@ export const Header = () => {
         <ul className="flex gap-5">
           {links.map(({ name, hash }) => (
             <li key={name}>
-              <Link
+              {/* UPDATED: Changed Link to a tag */}
+              <a
                 href={hash}
                 className="hover:text-foreground relative px-4 py-2 transition-colors"
                 onClick={() => {
@@ -86,7 +89,7 @@ export const Header = () => {
                     }}
                   ></motion.span>
                 )}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

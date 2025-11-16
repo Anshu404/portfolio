@@ -3,16 +3,17 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link'; // Removed next/link for preview
 import { toast } from 'sonner';
 
-import { sendEmailAction } from '@/actions/send-email';
-import { Button } from '@/components/button';
-import { Icons } from '@/components/icons';
-import { SectionHeading } from '@/components/section-heading';
-import { useSectionInView } from '@/hooks/use-section-in-view';
-import { formSchema, TFormSchema } from '@/lib/form-schema';
-import { cn } from '@/lib/utils';
+// UPDATED: Changed to relative paths for preview
+import { sendEmailAction } from '../actions/send-email';
+import { Button } from './button';
+import { Icons } from './icons';
+import { SectionHeading } from './section-heading';
+import { useSectionInView } from '../hooks/use-section-in-view';
+import { formSchema, TFormSchema } from '../lib/form-schema';
+import { cn } from '../lib/utils';
 
 export const Contact = () => {
   const { ref } = useSectionInView('Contact');
@@ -63,9 +64,10 @@ export const Contact = () => {
               className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
               asChild
             >
-              <Link href="mailto:skolakmichal1@gmail.com">
-                skolakmichal1@gmail.com
-              </Link>
+              {/* UPDATED: Changed email and using <a> tag */}
+              <a href="mailto:b23192@students.iitmandi.ac.in">
+                b23192@students.iitmandi.ac.in
+              </a>
             </Button>{' '}
             or through this form.
           </>

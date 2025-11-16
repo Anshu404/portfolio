@@ -11,7 +11,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 const HomePage = async () => {
   return (
     <>
-      <div className="container flex flex-col items-center">
+      <div className="w-full max-w-6xl mx-auto px-4 flex flex-col items-center">
         <Header />
         <Intro />
         <SectionDivider />

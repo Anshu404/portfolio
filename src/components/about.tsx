@@ -20,22 +20,24 @@ export const About = () => {
     >
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-2xl text-center leading-7">
+        {/* CHANGED: This is your new bio based on your resume */}
         <p className="mb-4">
-          I&apos;m Michał Skolak, I&apos;m a front-end developer from Poland.
-          I&apos;ve been learning programming for over 3 years. After I started
-          high school, I decided to pursue my passion for programming. My
-          favorite part of programming is the problem-solving aspect. I love the
-          feeling of finally figuring out a solution to a problem. I&apos;ve had
-          the opportunity to work on several exciting projects during my
-          learning journey, ranging from personal projects to collaborative
-          ventures. My core stack is React, Next.js, TypeScript, and Tailwind
-          CSS. I am also familiar with Nest.js and Prisma. I&apos;m always
-          looking to learn new technologies.
+          I&apos;m Anshu Kumar Mandal, a Full-Stack AI Engineer and a B.Tech
+          student at IIT Mandi, specializing in Data Science and Engineering. My
+          passion lies at the intersection of building scalable backend systems
+          and creating intelligent, AI-driven applications. I love the challenge
+          of architecting end-to-end solutions, from a modern user interface
+          right down to the complex AI models. My core stack includes{' '}
+          <strong>React, Next.js, and TypeScript</strong> for the frontend, and{' '}
+          <strong>Python with FastAPI and Flask</strong> for the backend. I&apos;m
+          also experienced with databases like MongoDB & PostgreSQL, and DevOps
+          tools like Docker and AWS.
         </p>
         <p>
-          I&apos;m open to Job opportunities where I can contribute, learn and
-          grow. If you have a good opportunity that matches my skills and
-          experience then don&apos;t hesitate to contact me.
+          I am actively seeking internship opportunities where I can
+          contribute, learn, and grow on challenging projects. If you have a good
+          opportunity that matches my skills and ambition, please don&apos;t
+          hesitate to contact me.
         </p>
       </div>
       <Skills />
