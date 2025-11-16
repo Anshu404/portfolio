@@ -416,10 +416,24 @@ export const projectsData = [
       "Vercel",
     ],
     links: {
-      preview: "https://youtu.be/M796-iVADto",
+      preview: "https://youtu.be/wj7qu6uyIYQ",
       github: "https://github.com/Anshu404/my-trip-planner-project",
       githubApi:
         "https://api.github.com/repos/Anshu404/my-trip-planner-project",
+    },
+  },
+
+
+  {
+    image: "/images/nirmaan.png",
+    title: "Nirmaan Club Website",
+    description:
+      "Multi-page student club website with React component architecture, reusable UI, and responsive design.",
+    technologies: ["React", "Tailwind", "Figma", "Component Architecture"],
+    links: {
+      preview: "https://www.youtube.com/watch?v=gc9pb0mj9VY",
+      github: "https://github.com/Anshu404/club_website",
+      githubApi: "https://api.github.com/repos/Anshu404/club_website",
     },
   },
 
@@ -436,18 +450,7 @@ export const projectsData = [
     },
   },
 
-  {
-    image: "/images/nirmaan.png",
-    title: "Nirmaan Club Website",
-    description:
-      "Multi-page student club website with React component architecture, reusable UI, and responsive design.",
-    technologies: ["React", "Tailwind", "Figma", "Component Architecture"],
-    links: {
-      preview: "https://www.youtube.com/watch?v=gc9pb0mj9VY",
-      github: "https://github.com/Anshu404/club_website",
-      githubApi: "https://api.github.com/repos/Anshu404/club_website",
-    },
-  },
+  
 
   {
     image: "/images/scheme_seva.png",
