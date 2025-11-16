@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Imports
-import { Icons } from './icons';
+import { ExternalLink, Building2, Calendar } from 'lucide-react';
 import { SectionHeading } from './section-heading';
 import { useSectionInView } from '../hooks/use-section-in-view';
 import { experiencesData } from '../lib/data';
@@ -25,27 +25,18 @@ export const Experience = () => {
       />
 
       <div className="relative max-w-screen-md">
-
         {experiencesData.map(
-          (
-            {
-              title,
-              description,
-              company,
-              period,
-              technologies,
-              certificate
-            }: any   // ⭐ TYPE ERROR FIX
-          ) => (
+          ({ title, description, company, period, technologies, certificate }) => (
             <div
               key={company}
               className="not-last:pb-12 relative pl-8 [&:not(:last-child)]:pb-10"
             >
-              {/* Timeline vertical line */}
+              {/* Timeline line */}
               <div className="bg-muted absolute left-0 top-2.5 h-full w-[2px]">
                 <div className="border-primary bg-background absolute left-[-5px] top-0 size-3 rounded-full border-2" />
               </div>
 
+              {/* Content */}
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,32 +46,32 @@ export const Experience = () => {
               >
                 {/* Company + certificate */}
                 <div className="flex items-center justify-between gap-3">
-
                   <div className="flex items-center gap-3">
                     <div className="flex size-9 shrink-0 items-center justify-center rounded-full border">
-                      <Icons.building className="size-5" />
+                      <Building2 className="size-5" />
                     </div>
                     <span className="text-lg font-semibold">{company}</span>
                   </div>
 
-                  {/* ⭐ CERTIFICATE BUTTON */}
-                  {certificate && (
+                  {/* ⭐ Certificate Button */}
+                  {certificate ? (
                     <a
                       href={certificate}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1 rounded-full border px-3 py-1 text-sm hover:bg-muted transition"
                     >
-                      <Icons.externalLink className="size-4" />
+                      <ExternalLink className="size-4" />
                       Certificate
                     </a>
-                  )}
+                  ) : null}
                 </div>
 
-                {/* Role */}
+                {/* Title & period */}
                 <div>
                   <h3 className="text-xl font-medium">{title}</h3>
                   <div className="mt-1 flex items-center gap-2 text-sm">
-                    <Icons.calendar className="size-4" />
+                    <Calendar className="size-4" />
                     <span>{period}</span>
                   </div>
                 </div>
@@ -88,9 +79,9 @@ export const Experience = () => {
                 {/* Description */}
                 <p className="text-muted-foreground">{description}</p>
 
-                {/* Tech badges */}
+                {/* Tech tags */}
                 <div className="flex flex-wrap gap-2">
-                  {technologies.map((tech: string) => (
+                  {technologies.map((tech) => (
                     <div
                       key={tech}
                       className="rounded-full border px-3 py-1 text-sm"
@@ -99,7 +90,11 @@ export const Experience = () => {
                     </div>
                   ))}
                 </div>
-
               </motion.div>
             </div>
           )
+        )}
+      </div>
+    </section>
+  );
+};
