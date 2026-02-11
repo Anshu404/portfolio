@@ -30,19 +30,23 @@ export const Projects = () => {
         />
       </motion.div>
 
-      {/* ⭐ Arrows + Slider Wrapper ⭐ */}
-      <div className="relative w-full mt-10">
+      {/* ⭐ Wrapper with Padding for Arrows ⭐ */}
+      <div className="relative w-full max-w-6xl mx-auto mt-10 px-12 sm:px-16">
 
-        {/* LEFT ARROW */}
+        {/* LEFT ARROW (Moved Outside with negative left) */}
         <div
-          className="custom-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 text-4xl cursor-pointer select-none text-gray-500 hover:text-black"
+          className="custom-prev absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-20 text-4xl cursor-pointer select-none 
+                     text-gray-400 hover:text-black hover:scale-110 transition 
+                     dark:text-gray-500 dark:hover:text-white"
         >
           ◀
         </div>
 
-        {/* RIGHT ARROW */}
+        {/* RIGHT ARROW (Moved Outside with negative right) */}
         <div
-          className="custom-next absolute right-4 top-1/2 -translate-y-1/2 z-20 text-4xl cursor-pointer select-none text-gray-500 hover:text-black"
+          className="custom-next absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 text-4xl cursor-pointer select-none 
+                     text-gray-400 hover:text-black hover:scale-110 transition 
+                     dark:text-gray-500 dark:hover:text-white"
         >
           ▶
         </div>
@@ -62,11 +66,12 @@ export const Projects = () => {
           className="w-full"
         >
           {projectsData.map((project, index) => (
-            <SwiperSlide key={project.title}>
-              <Project project={project} index={index} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    // 👇 UPDATE HERE: Added '!h-auto' and 'flex'
+    <SwiperSlide key={index} className="pb-10 pt-2 px-2 !h-auto flex"> 
+      <Project project={project} index={index} />
+    </SwiperSlide>
+  ))}
+</Swiper>
       </div>
     </section>
   );
