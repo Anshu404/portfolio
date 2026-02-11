@@ -26,7 +26,7 @@ export default function Certificates() {
         transition={{ delay: 0.175 }}
         viewport={{ once: true }}
       >
-        <SectionHeading>My Certificates</SectionHeading>
+        <SectionHeading heading="My Certificates" />
       </motion.div>
 
       {/* Wrapper */}
